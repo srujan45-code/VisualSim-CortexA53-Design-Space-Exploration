@@ -1,0 +1,15 @@
+DRAM_Statistics		0.0 ps
+
+"DRAM      Setup: 
+tRRD     Cycles: 0.0	Bank Select
+tCL      Cycles: 22.0	Col Address Strobe
+tRAS     Cycles: 51.2	Row Address Strobe
+tRCD     Cycles: 22.0	Row Col Delay
+tRP      Cycles: 22.0	Row Precharge
+tRL      Cycles: 22.0	Read Latency
+tWL      Cycles: 21.28	Write Latency
+tWtR     Cycles: 0.0	Write to Read
+DQSS Max Cycles: 0.0	DQSS Max Cycles -- Bidirectional Data Strobe
+DQSS Min Cycles: 0.0	DQSS Min Cycles -- Bidirectional Data Strobe
+tRTP     Cycles: 12.0"
+

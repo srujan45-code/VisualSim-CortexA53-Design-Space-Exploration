@@ -1,0 +1,24 @@
+Queue_Statistics		2.00000000 ms
+
+{BLOCK                        = "Xilinx_Ultrascale_Trace.DMA.SystemResource_Extend", 
+Buffer_Occupancy              = 0, 
+DELTA                         = 0.0, 
+DS_NAME                       = "Queue_Common_Stats", 
+ID                            = 1, 
+INDEX                         = 0, 
+Number_Entered                = 6, 
+Number_Exited                 = 5, 
+Number_Rejected               = 0, 
+Occupancy_Max                 = 1.0, 
+Occupancy_Mean                = 0.7058823529412, 
+Occupancy_Min                 = 0.0, 
+Occupancy_StDev               = 0.4556450995538, 
+Queue_Number                  = 1, 
+TIME                          = 0.002, 
+Time_in_Block                 = 0.0, 
+Total_Delay_Max               = 2.808582E-6, 
+Total_Delay_Mean              = 2.6538948E-6, 
+Total_Delay_Min               = 2.6131220000001E-6, 
+Total_Delay_StDev             = 7.737262599757E-8, 
+Utilization_Mean              = 0.0}
+

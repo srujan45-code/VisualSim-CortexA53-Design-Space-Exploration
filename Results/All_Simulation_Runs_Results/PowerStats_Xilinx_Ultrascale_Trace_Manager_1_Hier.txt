@@ -1,0 +1,45 @@
+
+
+Power_Manager  (Xilinx_Ultrascale_Trace.Manager_1) 
+Hier File Name (PowerStats_Xilinx_Ultrascale_Trace_Manager_1_Hier.txt)
+
+Device,                                      Cumulative,              Average                  
+Architecture_1_Cortex_A53_Core_1,            6.61295E-8,              3.30647E-5               
+Architecture_1_Cortex_A53_Core_2,            9.49802E-8,              4.74901E-5               
+Architecture_1_Cortex_A53_Core_3,            1.04492E-7,              5.22460E-5               
+Architecture_1_Cortex_A53_Core_4,            1.35881E-7,              6.79409E-5               
+Cache_I_Cache_Core_1,                        1.66269E-7,              8.31346E-5               
+Cache_D_Cache_Core_1,                        1.64791E-7,              8.23958E-5               
+Cache_I_Cache_Core_2,                        1.66027E-7,              8.30138E-5               
+Cache_D_Cache_Core_2,                        1.64200E-7,              8.21003E-5               
+Cache_I_Cache_Core_3,                        1.67285E-7,              8.36427E-5               
+Cache_D_Cache_Core_3,                        1.66878E-7,              8.34390E-5               
+Cache_I_Cache_Core_4,                        1.73271E-7,              8.66358E-5               
+Cache_D_Cache_Core_4,                        1.70520E-7,              8.52600E-5               
+Cache_L2,                                    2.03560E-7,              1.01780E-4               
+ACT_Standby_DRAM,                            7.51999E-5,              0.03759                  
+ACT_Active_DRAM,                             2.00254E-7,              1.00127E-4               
+Write_Power_DRAM,                            6.58532E-7,              3.29266E-4               
+Read_Power_DRAM,                             1.40704E-5,              0.00703                  
+RFSH_Power_0_DRAM,                           2.35078E-5,              0.01175                  
+RFSH_Power_1_DRAM,                           2.35078E-5,              0.01175                  
+RFSH_Power_2_DRAM,                           2.35078E-5,              0.01175                  
+RFSH_Power_3_DRAM,                           2.35078E-5,              0.01175                  
+RFSH_Power_4_DRAM,                           2.35078E-5,              0.01175                  
+RFSH_Power_5_DRAM,                           2.35078E-5,              0.01175                  
+RFSH_Power_6_DRAM,                           2.35078E-5,              0.01175                  
+RFSH_Power_7_DRAM,                           2.35078E-5,              0.01175                  
+RFSH_Power_8_DRAM,                           2.35078E-5,              0.01175                  
+RFSH_Power_9_DRAM,                           2.35078E-5,              0.01175                  
+RFSH_Power_10_DRAM,                          2.35078E-5,              0.01175                  
+RFSH_Power_11_DRAM,                          2.35078E-5,              0.01175                  
+RFSH_Power_12_DRAM,                          2.35078E-5,              0.01175                  
+RFSH_Power_13_DRAM,                          2.35078E-5,              0.01175                  
+RFSH_Power_14_DRAM,                          2.35078E-5,              0.01175                  
+RFSH_Power_15_DRAM,                          2.35078E-5,              0.01175                  
+STR_System_Bus_Wr_Data_Channel_4,            1.40059E-4,              0.07002                  
+STR_System_Bus_Rd_Data_Channel_1,            1.40728E-4,              0.07036                  
+STR_System_Bus_Rd_Data_Channel_4,            1.40114E-4,              0.07005                  
+
+TOTAL,                                       8.89102E-4,              0.44455                  
+GrandTOTAL,                                  8.89102E-4,              0.44455                  

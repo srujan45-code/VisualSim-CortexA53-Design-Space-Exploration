@@ -1,0 +1,45 @@
+AXI_Bus_Statistics		1.9999999990 ms
+
+{System_Bus_Master_4_Read_Data_Bytes 	 = 10240, 
+System_Bus_Master_4_Read_Data_MBps 	 = 5.12000000256, 
+System_Bus_Master_4_Write_Data_Bytes 	 = 10240, 
+System_Bus_Master_4_Write_Data_MBps 	 = 5.12000000256, 
+System_Bus_Slave_1_BW_Utilization_Prct 	 = 0.00666666667, 
+System_Bus_Slave_1_Read_Data_Bytes 	 = 10240, 
+System_Bus_Slave_1_Read_Data_MBps 	 = 5.12000000256, 
+System_Bus_Slave_1_Write_Data_Bytes 	 = 10240, 
+System_Bus_Slave_1_Write_Data_MBps 	 = 5.12000000256}
+
+{System_Bus_Slave_1_Rd_Threshold_Usage 	 = 1.0, 
+System_Bus_Slave_1_Rd_Transactions 	 = 1914}
+
+{System_Bus_Slave_1_Wr_Threshold_Usage 	 = 87.0, 
+System_Bus_Slave_1_Wr_Transactions 	 = 160}
+
+{Buffer_Occupancy             = 0, 
+DS_NAME                       = "System_Bus_Master_Write_Queue_4", 
+Number_Entered                = 160, 
+Number_Exited                 = 160, 
+Occupancy_Max                 = 1.0, 
+Occupancy_Mean                = 0.4984326018809, 
+Occupancy_Min                 = 0.0, 
+Occupancy_StDev               = 0.4999975432571, 
+Time_in_Block                 = 0.0, 
+Total_Delay_Max               = 1.6680000000571E-9, 
+Total_Delay_Mean              = 1.657639751552E-9, 
+Total_Delay_Min               = 0.0, 
+Total_Delay_StDev             = 1.3104792887353E-10}
+
+{Buffer_Occupancy             = 0, 
+DS_NAME                       = "System_Bus_Slave_Transactions_1", 
+Number_Entered                = 2074, 
+Number_Exited                 = 2074, 
+Occupancy_Mean                = 0.4998794309139, 
+Occupancy_Min                 = 0.0, 
+Occupancy_StDev               = 0.4999999854631, 
+Time_in_Block                 = 0.0, 
+Total_Delay_Max               = 3.3340000001221E-9, 
+Total_Delay_Mean              = 2.5707951807224E-10, 
+Total_Delay_Min               = 0.0, 
+Total_Delay_StDev             = 8.8938924810257E-10}
+

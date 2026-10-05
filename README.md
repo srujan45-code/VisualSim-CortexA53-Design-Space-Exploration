@@ -1,5 +1,5 @@
 # VisualSim Challenge 1 --- Innovate, Model and Explore a New System
-
+[Srujan Pratap Powar, Arshiya Agarwal, Minal Pramod Borkar, Aadya Priyadarshi]
 ## Project Title
 
 **Design-Space Exploration of a Quad-Core ARM Cortex-A53 Memory

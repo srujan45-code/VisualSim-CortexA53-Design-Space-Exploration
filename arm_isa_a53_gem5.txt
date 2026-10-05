@@ -1,0 +1,1430 @@
+/* Instruction Set or File Path. */
+
+Mnew Ra Rb Rc Rd Re Rf Rg Rh ; /* Label */
+ARM INTG ALU FPNEOSIMD LDSTR ;
+
+
+INTG      INT_1 INT_2  ; /* Integer_add */
+ALU       INT_3 INT_4  ; /*ALU Branch*/
+FPNEOSIMD FP_1         ; /*Floating point/NEON/ASIMD instructions*/
+LDSTR     INT_5        ; /*Load/Store instructions*/
+
+
+begin size_config                     ;
+ Read   6	  64	 INT_5[1:163]	  ;
+ Write  6	  128	INT_5[164:500] ;
+end size_config                       ;
+
+
+begin INT_1      ;
+/* AArch64*/
+
+add      1       ;
+adc      1       ;
+sub      1       ;
+sbc      1       ;
+adds     1       ;
+adcs     1       ;
+subs     1       ;
+sbcs     1       ;
+ccmn     1       ;
+ccmp     1       ;
+csel     1       ;
+csinc    1       ;
+csinv    1       ;
+csneg    1       ;
+ands     1   2   ;
+bics     1   2   ;
+eon      1       ;
+eor      1   2   ;
+orn      1   2   ;
+orr      1   2   ;
+and      1   2   ;
+bic      1   2   ;
+
+bcs      1   2   ;
+addxi_uop 1      ;
+
+cmps     1       ;
+addi_uop 1       ;
+subi_uop 1       ;
+addeq    1       ;
+addne    1       ;
+addi_uopcs   1   ;
+addi_uopne   1   ;
+addi_uople   1   ;
+andeq        1   ;
+andhi        1   ;
+subne        1   ;
+addi_uopeq   1   ;
+addi_uopgt   1   ;
+addi_uopge   1   ;
+subeq        1   ;
+addgt        1   ;
+subscs       1   ;
+andne        1   ;
+addls        1   ;
+subgt        1   ;
+bichi        1   ;
+orrhi        1   ;
+cmpseq       1   ; 
+dmb          1   ;
+orrgt        1 2 ;
+bicne        1 2 ;
+orreq        1 2 ;
+uopreg_uop   1   ;
+uopreg_uopeq 1   ;
+uopreg_uopne 1   ;
+uopreg_uopgt 1   ;
+uopreg_uople 1   ;
+rsble        1   ;
+uopReg_uopge 1   ;
+orrne        1   ;
+rsbeq        1   ;
+bicgt        1   ;
+addi_uopcc   1   ;
+addcc        1   ;
+bmi          1   ;
+bpl          1   ;
+bvs          1   ;
+bvc          1   ;
+
+
+
+
+
+/* unique AArch32*/
+
+rsb      1   2   ;
+rsc      1   2   ;
+cmn      1   2   ;
+cmp      1   2   ;
+eors     1   2   ;
+orns     1   2   ;
+orrs     1   2   ;
+rsbs     1   2   ;
+rscs     1   2   ;
+teq      1   2   ;
+tst      1   2   ;
+
+cmns     1   2   ;
+cmnsne   1   2   ;
+cmpsls   1   2   ;
+cmpsne   1   2   ;
+
+teqseq   1   2   ;
+tsts     1   2   ;
+tstsne   1   2   ;
+teqs     1   2   ;
+rsbne    1   2   ;
+rsbmi    1   2   ;
+
+nop      1       ;
+
+end INT_1        ;
+
+
+
+begin INT_2      ;
+
+/* AArch64*/
+
+add      1       ;
+adc      1       ;
+sub      1       ;
+sbc      1       ;
+adds     1       ;
+adcs     1       ;
+subs     1       ;
+sbcs     1       ;
+ccmn     1       ;
+ccmp     1       ;
+csel     1       ;
+csinc    1       ;
+csinv    1       ;
+csneg    1       ;
+ands     1   2   ;
+bics     1   2   ;
+eon      1       ;
+eor      1   2   ;
+orn      1   2   ;
+orr      1   2   ;
+and      1   2   ;
+bic      1   2   ;
+
+bcs      1   2   ;
+addxi_uop 1      ;
+
+cmps     1       ;
+addi_uop 1       ;
+subi_uop 1       ;
+addeq    1       ;
+addne    1       ;
+addi_uopcs   1   ;
+addi_uopne   1   ;
+addi_uople   1   ;
+andeq        1   ;
+andhi        1   ;
+subne        1   ;
+addi_uopeq   1   ;
+addi_uopgt   1   ;
+addi_uopge   1   ;
+subeq        1   ;
+addgt        1   ;
+subscs       1   ;
+andne        1   ;
+addls        1   ;
+subgt        1   ;
+bichi        1   ;
+orrhi        1   ;
+cmpseq       1   ; 
+dmb          1   ;
+orrgt        1 2 ;
+bicne        1 2 ;
+orreq        1 2 ;
+uopreg_uop   1   ;
+uopreg_uopeq 1   ;
+uopreg_uopne 1   ;
+uopreg_uopgt 1   ;
+uopreg_uople 1   ;
+rsble        1   ;
+uopReg_uopge 1   ;
+orrne        1   ;
+rsbeq        1   ;
+bicgt        1   ;
+addi_uopcc   1   ;
+addcc        1   ;
+bmi          1   ;
+bpl          1   ;
+bvs          1   ;
+bvc          1   ;
+
+
+
+/* unique AArch32*/
+
+
+rsb      1   2   ;
+rsc      1   2   ;
+cmn      1   2   ;
+cmp      1   2   ;
+eors     1   2   ;
+orns     1   2   ;
+orrs     1   2   ;
+rsbs     1   2   ;
+rscs     1   2   ;
+teq      1   2   ;
+tst      1   2   ;
+
+cmns     1   2   ;
+cmnsne   1   2   ;
+cmpsls   1   2   ;
+cmpsne   1   2   ;
+
+teqseq   1   2   ;
+tsts     1   2   ;
+tstsne   1   2   ;
+teqs     1   2   ;
+rsbne    1   2   ;
+rsbmi    1   2   ;
+
+nop      1       ;
+
+end INT_2        ;
+
+
+
+
+
+begin INT_3      ;
+
+/* AArch64*/
+
+sdiv     3   12  ;
+udiv     3   20  ;
+madd     1   2   ;
+msub     1   2   ;
+smaddl   1   2   ;
+smsubl   1   2   ;
+umaddl   1   2   ;
+umsubl   1   2   ;
+smulh    3       ;
+umulh    3       ;
+
+
+adr      1       ;
+adrp     1       ;
+extr     1   3   ;
+sbfm     1       ;
+ubfm     1       ;
+bfm      2       ;
+cls      1       ;
+clz      1       ;
+movn     1       ;
+movk     1       ;
+movz     1       ;
+rbit     1       ;
+rev      1       ;
+rev16    1       ;
+rev32    1       ;
+asrv     1       ;
+lslv     1       ;
+lsrv     1       ;
+rorv     1       ;
+
+msr      1       ;
+mrs      1       ;
+svc      1       ;
+
+clzne    1       ;
+moveq    1       ;
+movne    1       ;
+movcc    1       ;
+movls    1       ;
+movcs    1       ;
+movle    1       ;
+movgt    1       ;
+movhi    1       ;
+mvngt    1       ;
+movlt    1       ;
+movge    1       ;
+mrc      1       ;
+muls     1       ;
+mvnne    1       ;
+mvneq    1       ;
+
+
+
+
+
+
+/* unique AArch32*/
+
+mov      1       ;
+movw     1       ;
+mvn      1   2   ;
+movs     1       ;
+mvns     1   2   ;
+asr      1   2   ;
+lsl      1   2   ;
+lsr      1   2   ;
+ror      1   2   ;
+rrx      1   2   ;
+asrs     2   2   ;
+lsls     2   2   ;
+lsrs     2   2   ;
+rors     2   2   ;
+rrxs     2   2   ;
+movt     1       ;
+
+
+
+mul      2       ;
+smulbb   2       ;
+smulbt   2       ;
+smultb   2       ;
+smultt   2       ;
+smulwb   2       ;
+smulwt   2       ;
+smmulr   2       ;
+smmul    2       ;
+smuadx   2       ;
+smuad    2       ;
+smusdx   2       ;
+smusd    2       ;
+mla      1   3   ;
+mls      1   3   ;
+smlabb   1   3   ;
+smlabt   1   3   ;
+cmlatb   1   3   ;
+smlatt   1   3   ;
+smlawb   1   3   ;
+smlawt   1   3   ;
+smladx   1   3   ;
+smlad    1   3   ;
+smlsdx   1   3   ;
+smlsd    1   3   ;
+smmlar   1   3   ;
+smmla    1   3   ;
+smmlsr   1   3   ;
+smmls    1   3   ;
+umaal    3   4   ;
+smlal    2       ;
+smlalbb  2       ;
+smlalbt  2       ;
+smlaltb  2       ;
+smlaltt  2       ;
+smlaldx  2       ;
+smlald   2       ;
+smlsldx  2       ;
+smlsld   2       ;
+umlal    2       ;
+smull    2       ;
+umull    2       ;
+smulls   3       ;
+umulls   3       ;
+
+
+
+
+sadd16   2   4   ;
+sadd8    2   4   ;
+ssub16   2   4   ;
+ssub8    2   4   ;
+uadd16   2   4   ;
+uadd8    2   4   ;
+usub16   2   4   ;
+usub8    2   4   ;
+sasx     3   5   ;
+ssax     3   5   ;
+uasx     3   5   ;
+usax     3   5   ;
+shadd16  2       ;
+shadd8   2       ;
+shsub16  2       ;
+shsub8   2       ;
+uhadd16  2       ;
+uhadd8   2       ;
+uhsub16  2       ;
+uhsub8   2       ;
+shasx    3       ;
+shsax    3       ;
+uhasx    3       ;
+uhsax    3       ;
+qadd16   2       ;
+qadd8    2       ;
+qsub16   2       ;
+qsub8    2       ;
+uqadd16  2       ;
+uqadd8   2       ;
+uqsub16  2       ;
+uqsub8   2       ;
+qasx     3   5   ;
+qsax     3   5   ;
+uqasx    3   5   ;
+uqsax    3   5   ;
+ssat     2       ;
+ssat16   2       ;
+usat     2       ;
+usat16   2       ;
+qadd     2       ;
+qsub     2       ;
+qdadd    4       ;
+qdsub    4       ;
+
+
+
+sbfx     1       ;
+ubfx     1       ;
+bfi      2       ;
+bfc      2       ;
+clz      1       ;
+pkh      2       ;
+revsh    1       ;
+sel      1       ;
+sxtb     1       ;
+sxth     1       ;
+uxtb     1       ;
+uxth     1       ;
+sxtb16   2       ;
+uxtb16   2       ;
+sxtab    2       ;
+sxtah    2       ;
+uxtab    2       ;
+uxtah    2       ;
+sxtab16  4       ;
+uxtab16  4       ;
+usad8    2       ;
+usada8   2       ;
+
+end INT_3        ;
+
+
+begin INT_4      ;
+
+/* AArch64*/
+
+b        1       ;
+*b       7       ;
+br       1       ;
+ret      1       ;
+bl       1       ;
+blr      1       ;
+cbz      1       ;
+cbnz     1       ;
+tbz      1       ;
+tbnz     1       ;
+
+beq      1       ;
+bls      1       ;
+bne      1       ;
+bhi      1       ;
+ble      1       ;
+bcc      1       ;
+bgt      1       ;
+blt      1       ;
+bge      1       ;
+
+/* unique AArch32*/
+
+bx       1       ;
+blx      1       ;
+
+end INT_4        ;
+
+
+
+
+begin INT_5      ;
+
+/* AArch64*/
+
+ldr      1       ;
+ldrsw    1       ;
+prfm     1       ;
+ldur     1       ;
+ldurb    1       ;
+ldurh    1       ;
+ldursb   1       ;
+ldursh   1       ;
+ldursw   1       ;
+prfum    1       ;
+ldrb     1   2   ;
+ldrh     1   2   ;
+ldrsb    1   2   ;
+ldrsh    1   2   ;
+ldrsw    1   2   ;
+ldtr     1   2   ;
+ldtrb    1   2   ;
+ldtrh    1   2   ;
+ldtrsb   1   2   ;
+ldtrsh   1   2   ;
+ldtrsw   1   2   ;
+ldp      1   2   ;
+ldnp     1   2   ;
+ldpsw    1       ;
+
+ldadd    1       ;
+ldadda   1       ;
+ldaddb   1       ;
+ldaddab  1       ;
+ldaddh   1       ;
+ldaddah  1       ;
+ldclr    1       ;
+ldclra   1       ;
+ldclrb   1       ;
+ldclrab  1       ;
+ldclrh   1       ;
+ldclrah  1       ;
+ldeor    1       ;
+ldeora   1       ;
+ldeorb   1       ;
+ldeorab  1       ;
+ldeorh   1       ;
+ldeorah  1       ;
+ldset    1       ;
+ldseta   1       ;
+ldsetb   1       ;
+ldsetab  1       ;
+ldseth   1       ;
+ldsetah  1       ;
+ldsmax   1       ;
+ldsmaxa  1       ;
+ldsmaxb  1       ;
+ldsmaxab 1       ;
+ldsmaxh  1       ;
+ldsmaxah 1       ;
+ldsmin   1       ;
+ldsmina  1       ;
+ldsminb  1       ;
+ldsminab 1       ;
+ldsminh  1       ;
+ldsminah 1       ;
+ldumax   1       ;
+ldumaxa  1       ;
+ldumaxb  1       ;
+ldumaxab 1       ;
+ldumaxh  1       ;
+ldumaxah 1       ;
+ldumin   1       ;
+ldumina  1       ;
+lduminb  1       ;
+lduminab 1       ;
+lduminh  1       ;
+lduminah 1       ;
+ldaddl   1       ;
+ldaddlb  1    2  ;
+ldaddlh  1    2  ;
+ldclrl   1    2  ;
+ldclrlb  1    2  ;
+ldclrlh  1    2  ;
+ldeorl   1    2  ;
+ldeorlb  1    2  ;
+ldeorlh  1    2  ;
+ldsetl   1    2  ;
+ldsetlb  1    2  ;
+ldsetlh  1    2  ;
+ldsmaxl  1    2  ;
+ldsmaxlb 1    2  ;
+ldsmaxlh 1    2  ;
+ldsminl  1    2  ;
+ldsminlb 1    2  ;
+ldsminlh 1    2  ;
+ldumaxl  1    2  ;
+ldumaxlb 1    2  ;
+ldumaxlh 1    2  ;
+lduminl  1    2  ;
+lduminlb 1    2  ;
+lduminlh 1    2  ;
+ldaddal  1    2  ;
+ldaddalb 1    2  ;
+ldaddalh 1    2  ;
+ldclral  1    2  ;
+ldclralb 1    2  ;
+ldclralh 1    2  ;
+ldeoral  1    2  ;
+ldeoralb 1    2  ;
+ldeoralh 1    2  ;
+ldsetal  1    2  ;
+ldsetalb 1    2  ;
+ldsetalh 1    2  ;
+ldsmaxal 1    2  ;
+ldsmaxalb 1    2 ;
+ldsmaxalh 1    2 ;
+ldsminal 1    2  ;
+ldsminalb 1    2 ;
+ldsminalh 1    2 ;
+ldumaxal 1    2  ;
+ldumaxalb 1    2 ;
+ldumaxalh 1    2 ;
+lduminal 1    2  ;
+lduminalb 1    2 ;
+lduminalh 1    2 ;
+
+ldp_uop  1       ;
+ldrduxi_uop  1   ;
+ldaxr    1       ;
+ldxr     1       ;
+ldr2_uople  1    ;
+ldr2_uopgt  1    ;
+ldr2_uopne  1    ;
+ldr_uopeq   1    ;
+ldrhi       1    ;
+ldrbgt      1    ;
+ldrbge      1    ;
+ldreq       1    ;
+ldr2_uopeq  1    ;
+ldrex       1    ;
+ldrbne      1    ;
+ldrbcs      1    ;
+ldrne       1    ;
+ldrls       1    ;
+ldr2_uop    1    ;
+ldr_uop     1    ;
+ldrge       1    ;
+ldr2_uopge  1    ;
+
+/* unique AArch32*/
+
+ldrt     1   2   ;
+ldrbt    1   2   ;
+ldrd     1   2   ;
+ldrht    1   2   ;
+ldrsbt   1   2   ;
+ldrsht   1   2   ;
+pld      1   3   ;
+pli      1   3   ;
+pldw     1   3   ;
+ldmia    8   9   ; /*floor((num_reg+3)/4), 1+floor((num_reg+3)/4)*/
+ldmib    8   9   ; /*floor((num_reg+3)/4), 1+floor((num_reg+3)/4)*/
+ldmda    8   9   ; /*floor((num_reg+3)/4), 1+floor((num_reg+3)/4)*/
+ldmdb    8   9   ; /*floor((num_reg+3)/4), 1+floor((num_reg+3)/4)*/ 
+pop      9       ; /*1+floor((num_reg+3)/4)*/
+lda      1   2   ;
+ldab     1   2   ;
+ldah     1   2   ;
+ldaex    1   2   ;
+ldaexb   1   2   ;
+ldaexh   1   2   ;
+ldaexd   1   2   ;
+
+stur     1       ;
+sturb    1       ;
+sturh    1       ;
+str      1       ;
+strb     1       ;
+strh     1       ;
+sttr     1       ;
+sttrb    1       ;
+sttrh    1       ;
+stp      1       ;
+stnp     1       ;
+
+stadd    1       ;
+stadda   1       ;
+staddab  1       ;
+staddb   1       ;
+staddah  1       ;
+staddh   1       ;
+stclr    1       ;
+stclra   1       ;
+stclrb   1       ;
+stclrab  1       ;
+stclrh   1       ;
+stclrah  1       ;
+steor    1       ;
+steora   1       ;
+steorb   1       ;
+steorab  1       ;
+steorh   1       ;
+steorah  1       ;
+stset    1       ;
+stseta   1       ;
+stsetb   1       ;
+stsetab  1       ;
+stseth   1       ;
+stsetah  1       ;
+stsmax   1       ;
+stsmaxa  1       ;
+stsmaxb  1       ;
+stsmaxab 1       ;
+stsmaxh  1       ;
+stsmaxah 1       ;
+stsmin   1       ;
+stsmina  1       ;
+stsminb  1       ;
+stsminab 1       ;
+stsminh  1       ;
+stsminah 1       ;
+stumax   1       ;
+stumaxa  1       ;
+stumaxb  1       ;
+stumaxab 1       ;
+stumaxh  1       ;
+stumaxah 1       ;
+stumin   1       ;
+stumina  1       ;
+stuminb  1       ;
+stuminab 1       ;
+stuminh  1       ;
+stuminah 1       ;
+staddl   2       ;
+staddlb  2       ;
+staddlh  2       ;
+stclrl   2       ;
+stclrlb  2       ;
+stclrlh  2       ;
+steorl   2       ;
+steorlb  2       ;
+steorlh  2       ;
+stsetl   2       ;
+stsetlb  2       ;
+stsetlh  2       ;
+stsmaxl  2       ;
+stsmaxlb 2       ;
+stsmaxlh 2       ;
+stsminl  2       ;
+stsminlb 2       ;
+stsminlh 2       ;
+stumaxl  2       ;
+stumaxlb 2       ;
+stumaxlh 2       ;
+stuminl  2       ;
+stuminlb 2       ;
+stuminlh 2       ;
+staddal  2       ;
+staddalb 2       ;
+staddalh 2       ;
+stclral  2       ;
+stclralb 2       ;
+stclralh 2       ;
+steoral  2       ;
+steoralb 2       ;
+steoralh 2       ;
+stsetal  2       ;
+stsetalb 2       ;
+stsetalh 2       ;
+stsmaxal 2       ;
+stsmaxalb 2      ;
+stsmaxalh 2      ;
+stsminal 2       ;
+stsminalb 2      ;
+stsminalh 2      ;
+stumaxal 2       ;
+stumaxalb 2      ;
+stumaxalh 2      ;
+stuminal 2       ;
+stuminalb 2      ;
+stuminalh 2      ;
+
+
+cas      3   4   ;
+casa     3   4   ; 
+casb     3   4   ;
+casab    3   4   ; 
+cash     3   4   ;
+casah    3   4   ; 
+casl     3       ;
+caslb    3       ;
+caslh    3       ;
+casal    3       ;
+casalb   3       ;
+casalh   3       ;
+casp     5       ;
+caspa    5       ;
+caspl    4       ;
+caspal   4       ;
+strxi_uop    1   ;
+stxr     1       ;
+strqbfpxi_uop 1  ;
+strqtfpxi_uop 1  ;
+strfpxi_uop   1  ;
+strdxi_uop    1  ;
+Xpaclri  2       ;
+stlxr    4       ;
+dczva    1       ;
+xpaclri  2       ;
+
+strge       1  2 ;
+strhi       1  2 ;
+strfp_uop   1    ;
+str_uopcs   1    ;
+strbgt      1  2 ;
+strbge      1  2 ;
+strgt       1  2 ;
+strcc       1  2 ;
+
+streq       1  2 ;
+
+strexeq     1  2 ;
+
+
+strbne      1  2 ;
+strbcs      1  2 ;
+str_uop     1  2 ;
+strne       1  2 ;
+strls       1    ;
+strbcc      1    ;
+
+stlr        2    ;
+stlrb       2    ;
+stlrh       2    ;
+stllr       2    ;
+stllrb      2    ;
+stllrh      2    ;
+stlxr       4    ;
+stlxrb      4    ;
+stlxrh      4    ;
+stlxp       4    ;
+  
+
+
+
+/* unique AArch32*/
+
+
+
+strt     1       ;
+strbt    1       ;
+strd     1   2   ;
+strht    1       ;
+stmia    8       ; /*floor((num_reg+3)/4)*/
+stmib    8       ; /*floor((num_reg+3)/4)*/
+stmda    8       ; /*floor((num_reg+3)/4)*/
+stmdb    8       ; /*floor((num_reg+3)/4)*/
+push     8       ; /*floor((num_reg+3)/4)*/
+
+stl      2       ;
+stlb     2       ;
+stlh     2       ;
+stlex    4       ;
+stlexb   4       ;
+stlexh   4       ;
+stlexd   4       ;
+
+
+end INT_5        ;
+
+
+
+begin FP_1       ;
+
+/* AArch64*/
+
+fabs     2       ;
+fadd     2       ;
+fsub     2       ;
+fccmpe   2       ;
+fccmp    2       ;
+fcmpe    2       ;
+fcmp     2       ;
+fdiv     7   15  ;
+fmin     2       ;
+fminnm   2       ;
+fmax     2       ;
+fmaxnm   2       ;
+fmul     3       ;
+fnmul    3       ;
+fmadd    2   4   ;
+fmsub    2   4   ;
+fnmadd   2   4   ;
+fnmsub   2   4   ;
+fneg     2       ;
+frinta   3       ;
+frinti   3       ;
+frintm   3       ;
+frintn   3       ;
+frintp   3       ;
+frintx   3       ;
+frintz   3       ;
+fcsel    2       ;
+fsqrt    7   17  ;
+
+
+
+fcvt     3       ;
+fcvtxn   3       ;
+scvtf    6       ;
+ucvtf    6       ;
+fmov     2   3   ;
+
+
+
+sabd     2       ;
+uabd     2       ;
+saba     2       ;
+uaba     2       ;
+sabal    1   4   ;
+uabal    1   4   ;
+sabdl    2       ;
+uabdl    2       ;
+abs      2       ;
+add      2       ;
+neg      2       ;
+saddl    2       ;
+saddw    2       ;
+shadd    2       ;
+shsub    2       ;
+ssubl    2       ;
+ssubw    2       ;
+sub      2       ;
+uaddl    2       ;
+uaddw    2       ;
+uhadd    2       ;
+uhsub    2       ;
+usubl    2       ;
+usubw    2       ;
+addhn    2       ;
+raddhn   2       ;
+rsubhn   2       ;
+sqabs    2       ;
+sqadd    2       ;
+sqneg    2       ;
+sqsub    2       ;
+srhadd   2       ;
+subhn    2       ;
+suqadd   2       ;
+sqadd    2       ;
+uqsub    2       ;
+urhadd   2       ;
+usqadd   2       ;
+addp     2       ;
+saddlp   2       ;
+uaddlp   2       ;
+addv     3       ;
+saddlv   3       ;
+uaddlv   3       ;
+addv     5   6   ;
+saddlv   5   6   ;
+uaddlv   5   6   ;
+cmeq     2       ;
+cmge     2       ;
+cmgt     2       ;
+cmhi     2       ;
+cmhs     2       ;
+cmle     2       ;
+cmlt     2       ;
+cmtst    2       ;
+sdot     2       ;
+udot     2       ;
+and      2       ;
+bic      2       ;
+eor      2       ;
+mov      2       ;
+mvn      2       ;
+orn      1   2   ;
+orr      1   2   ;
+not      2       ;
+smax     2       ;
+smaxp    2       ;
+smin     2       ;
+sminp    2       ;
+umax     2       ;
+umaxp    2       ;
+umin     2       ;
+uminp    2       ;
+smaxv    3   6   ;
+sminv    3   6   ;
+umaxv    3   6   ;
+uminv    3   6   ;
+mul      4   5   ;
+sqdmulh  4   5   ;
+sqrdmulh 4   5   ;
+mla      1   5   ;
+mls      1   5   ;
+sqrdmlah 4   5   ;
+sqrdmlsh 4   5   ;
+smlal    1   4   ;
+smlsl    1   4   ;
+umlal    1   4   ;
+umlsl    1   4   ;
+sqdmlal  4       ;
+sqdmlsl  4       ;
+pmul     3   4   ;
+pmull    3   4   ;
+smull    4       ;
+umull    4       ;
+sqdmull  4       ;
+sadalp   1   4   ;
+uadalp   1   4   ;
+ssra     1   4   ;
+srsra    1   4   ;
+usra     1   4   ;
+ursra    1   4   ;
+shl      2       ;
+shll     2       ;
+shrn     2       ;
+sshll    2       ;
+sshr     2       ;
+sxtl     2       ;
+ushll    2       ;
+ushr     2       ;
+uxtl     2       ;
+sli      2       ;
+sri      2       ;
+rshrn    4       ;
+sqrshrn  4       ;
+sqrshrun 4       ;
+sqshl    4       ;
+sqshrn   4       ;
+sqshrun  4       ;
+srshr    4       ;
+uqrshrn  4       ;
+uqshl    4       ;
+uqshrn   4       ;
+urshr    4       ;
+sshl     2       ;
+ushl     2       ;
+srshl    4       ;
+sqrshl   4       ;
+sqshlu   4       ;
+urshl    4       ;
+uqrshl   4       ;
+
+
+
+fabs     2       ;
+fabd     2       ;
+fadd     2       ;
+fsub     2       ;
+faddp    2       ;
+facge    2       ;
+facgt    2       ;
+fcmeq    2       ;
+fcmge    2       ;
+fcmgt    2       ;
+fcmle    2       ;
+fcmlt    2       ;
+fcvtl    3   4   ;
+fcvtn    3   4   ;
+fcvtxn   3       ;
+fcvtas   3   6   ;
+fcvtau   3   6   ;
+fcvtms   3   6   ;
+fcvtmu   3   6   ;
+fcvtns   3   6   ;
+fcvtnu   3   6   ;
+fcvtps   3   6   ;
+fcvtpu   3   6   ;
+fcvtzs   3   6   ;
+fcvtzu   3   6   ;
+scvtf    3   6   ;
+ucvtf    3   6   ;
+fdiv     7   15  ;
+fmax     2       ;
+fmaxnm   2       ;
+fmin     2       ;
+fminnm   2       ;
+fmaxp    2       ;
+fmaxnmp  2       ;
+fminp    2       ;
+fminnmp  2       ;
+fmaxv    5   8   ;
+fmaxnmv  5   8   ;
+fminv    5   8   ;
+fminnmv  5   8   ;
+fmul     3       ;
+fmulx    3       ;
+fmla     2   4   ;
+fmls     2   4   ;
+fmlal    2   5   ;
+fmlsl    2   5   ;
+fneg     2       ;
+frinta   3   6   ;
+frinti   3   6   ;
+frintm   3   6   ;
+frintn   3   6   ;
+frintp   3   6   ;
+frintx   3   6   ;
+frintz   3   6   ;
+fsqrt    7   17  ;
+
+
+rbit     2       ;
+bif      2       ;
+bit      2       ;
+bsl      2       ;
+cls      2       ;
+clz      2       ;
+cnt      2       ;
+dup      2   3   ;
+ext      2       ;
+xtn      2       ;
+sqxtn    4       ;
+sqxtun   4       ;
+uqxtn    4       ;
+ins      2   5   ;
+fmov     2       ;
+movi     2       ;
+mvni     2       ;
+frecpe   3   6   ;
+frecpx   3   6   ;
+frsqrte  3   6   ;
+urecpe   3   6   ;
+ursqrte  3   6   ;
+frecps   4       ;
+frsqrts  4       ;
+rev16    2       ;
+rev32    2       ;
+rev64    2       ;
+tbl      2   4   ;
+tbx      2   6   ;
+umov     2       ;
+smov     2       ;
+trn1     2       ;
+trn2     2       ;
+uzp1     2       ;
+uzp2     2       ;
+zip1     2       ;
+zip2     2       ;
+vbif     2       ;
+vbit     2       ;
+vbsl     2       ;
+vcls     2       ;
+vclz     2       ;
+vcnt     2       ;
+vdup     2   3   ;
+vext     2       ;
+vmov     2       ;
+vmovn    2       ;
+vqmovn   4       ;
+vqmovun  4       ;
+vrecpe   3   4   ;
+vrsqrte  3   4   ;
+vrecps   5       ;
+vrsqrts  5       ;
+vrev16   2       ;
+
+
+
+
+ld1      5   7   ;
+ld1r     7       ;
+ld2      7       ;
+ld2r     7       ;
+ld3      7   8   ;
+ld3r     7       ;
+ld4      8   10  ;
+ld4r     8       ;
+
+
+
+
+st1      2   5   ;
+st2      4   5   ;
+st3      4   6   ;
+st4      5   9   ;
+
+
+
+aesd     2       ;
+aese     2       ;
+aesimc   2       ;
+aesmc    2       ;
+pmull    2       ;
+sha1h    2       ;
+sha1c    4       ;
+sha1m    4       ;
+sha1p    4       ;
+sha1su0  2       ;
+sha1su1  2       ;
+sha256h  4       ;
+sha256h2 4       ;
+sha256su0 2      ;
+sha256su1 2      ;
+
+
+
+crc32    2       ;
+crc32c   2       ;
+
+deint_neon_uop 1 ;
+mem_neon_uopld 4 ;
+vmrs     1       ;
+vmsr     1       ;
+fcvtZs   3   6   ;
+
+
+
+
+/* unique AArch32*/
+
+vabs     2       ;
+vadd     2       ;
+vsub     2       ;
+vcmp     2   4   ;
+vcmpe    2   4   ;
+vcvtr    3       ;
+vcvt     3       ;
+vcvtb    3       ;
+vcvtt    3       ;
+vcvta    3       ;
+vcvtm    3       ;
+vcvtn    3       ;
+vcvtp    3       ;
+vdiv     7   15  ;
+vmaxnm   2       ;
+vminnm   2       ;
+vmul     3       ;
+vnmul    3       ;
+vmla     2   5   ;
+vmls     2   5   ;
+vnmla    2   5   ;
+vnmls    2   5   ;
+vfma     2   4   ;
+vfms     2   4   ;
+vfnma    2   4   ;
+vfnms    2   4   ;
+vneg     2       ;
+vrinta   3       ;
+vrintm   3       ;
+vrintn   3       ;
+vrintp   3       ;
+vrintr   3       ;
+vrintx   3       ;
+vrintz   3       ;
+vseleq   2       ;
+vselge   2       ;
+vselgt   2       ;
+vselvs   2       ;
+vsqrt    7   17  ;
+
+
+
+vmov     2   6   ;
+vins     2       ;
+vmovx    2       ;
+
+
+vldr     4       ;
+vldmia   8   10  ; /*floor((num_reg+3)/4), 2+floor((num_reg+3)/4)*/
+vldmdb   8   10  ; /*floor((num_reg+3)/4), 2+floor((num_reg+3)/4)*/
+vpop     8   10  ; /*floor((num_reg+3)/4), 2+floor((num_reg+3)/4)*/
+
+
+vstr     2       ;
+vstmia   9   17  ; /*1+floor((num_reg+3)/4), 1+floor((num_reg+1)/2)*/
+vstmda   9   17  ; /*1+floor((num_reg+3)/4), 1+floor((num_reg+1)/2)*/
+vpush    9   17  ; /*1+floor((num_reg+3)/4), 1+floor((num_reg+1)/2)*/
+
+
+
+vabd     2       ;
+vaba     1   4   ;
+vabal    1   4   ;
+vabdl    2       ;
+vadd     2       ;
+vaddl    2       ;
+vaddw    2       ;
+vneg     2       ;
+vsub     2       ;
+vsubl    2       ;
+vsubw    2       ;
+vabs     2       ;
+vaddhn   2       ;
+vhadd    2       ;
+vhsub    2       ;
+vqabs    2       ;
+vqadd    2       ;
+vqneg    2       ;
+vqsub    2       ;
+vraddhn  2       ;
+vehadd   2       ;
+vrsubhn  2       ;
+vsubhn   2       ;
+vsdot    2       ;
+vudot    2       ;
+vpadd    2       ;
+vpaddl   2       ;
+vceq     2       ;
+vcge     2       ;
+vcgt     2       ;
+vcle     2       ;
+vtst     2       ;
+vand     2       ;
+vbic     2       ;
+vmvn     2       ;
+vorr     2       ;
+vorn     2       ;
+veor     2       ;
+vmax     2       ;
+vmin     2       ;
+vpmax    2       ;
+vpmin    2       ;
+vmul     4   5   ;
+vqdmulh  4   5   ;
+vqrdmulh 4   5   ;
+vmla     1   5   ;
+vmls     1   5   ;
+vqrdmlah 4   5   ;
+vqrdmlsh 4   5   ;
+vmlal    1   4   ;
+vmlsl    1   4   ;
+vqdmlal  4       ;
+vqdmlsl  4       ;
+vmulp8   3   4   ;
+vmullp8  3       ;
+vmulls   4       ;
+vmulli   4       ;
+vqdmull  4       ;
+vpadal   1   4   ;
+vsra     1   4   ;
+vrsra    1   4   ;
+vmovl    2       ;
+vshl     2       ;
+vshll    2       ;
+vshr     2       ;
+vshrn    2       ;
+vsli     2       ;
+vsri     2       ;
+vqrshrn  4       ;
+vqrshrun 4       ;
+vqshlu   4       ;
+vqshrn   4       ;
+vqshrun  4       ;
+vrshr    4       ;
+vrshrn   4       ;
+vshl     2       ;
+vqrshl   4       ;
+vqshl    4       ;
+vrshl    4       ;
+
+
+
+
+vabs     2       ;
+vabd     2       ;
+vadd     2       ;
+vpadd    2       ;
+vsub     2       ;
+vacge    2       ;
+vacgt    2       ;
+vacle    2       ;
+vaclt    2       ;
+vceq     2       ;
+vcge     2       ;
+vcgt     2       ;
+vcle     2       ;
+vcvt     3   4   ;
+vcvta    3   4   ;
+vcvtm    3   4   ;
+vcvtn    3   4   ;
+vcvtp    3   4   ;
+vmax     2       ;
+vmin     2       ;
+vpmax    2       ;
+vpmin    2       ;
+vmaxnm   2       ;
+vminnm   2       ;
+vmul     3       ;
+vnmul    3       ;
+vmla     2   5   ;
+vmls     2   5   ;
+vfma     2   4   ;
+vfms     2   4   ;
+vneg     2       ;
+vrinta   3   4   ;
+vrintm   3   4   ;
+vrintn   3   4   ;
+vrintp   3   4   ;
+vrintx   3   4   ;
+vrintz   3   4   ;
+
+
+
+vbif     2       ;
+vbit     2       ;
+vbsl     2       ;
+vcls     2       ;
+vclz     2       ;
+vcnt     2       ;
+vdup     2   3   ;
+vext     2       ;
+vmov     2       ;
+vmovn    2       ;
+vqmovn   4       ;
+vqmovun  4       ;
+vrecpe   3   4   ;
+vrsqrte  3   4   ;
+vrecps   5       ;
+vrsqrts  5       ;
+vrev16   2       ;
+vrev32   2       ;
+vrev64   2       ;
+vswp     4       ;
+vtbl     2   4   ;
+vtbx     2   6   ;
+vmov     2   5   ;
+vtrn     4       ;
+vuzp     4       ;
+vzip     4       ;
+
+
+vld1     5   7   ;
+vld2     7   8   ;
+vld3     8       ;
+vld4     8       ;
+
+
+vst1     2   4   ;
+vst2     4   5   ;
+vst3     4   5   ;
+vst4     7   8   ;
+
+
+vmullp64 2       ;
+
+swpl     3       ;
+swplb    3       ;
+swplh    3       ;
+swpal    3       ;
+swpalb   3       ;
+swpalh   3       ;
+swp      2       ;
+swpa     2       ;
+swpb     2       ;
+swpab    2       ;
+swph     2       ;
+swpah    2       ;
+
+end FP_1         ;

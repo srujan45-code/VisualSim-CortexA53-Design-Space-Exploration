@@ -1,5 +1,5 @@
 # VisualSim Challenge 1 --- Innovate, Model and Explore a New System
-Team - 404:Signal Not Found 
+Team - 404:Signal Not Found                                                       
 Teammates - Srujan Pratap Powar, Arshiya Agarwal, Minal Pramod Borkar, Aadya Priyadarshi
 ## Project Title
 
